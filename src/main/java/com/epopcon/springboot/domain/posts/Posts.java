@@ -30,4 +30,6 @@ public class Posts {
         this.author = author;
     }
 
+    public void update() {
+    }
 }
