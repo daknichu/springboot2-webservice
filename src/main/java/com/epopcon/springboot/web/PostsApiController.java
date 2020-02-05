@@ -1,6 +1,7 @@
 package com.epopcon.springboot.web;
 
 import com.epopcon.springboot.service.PostsService;
+import com.epopcon.springboot.web.dto.PostsResponseDto;
 import com.epopcon.springboot.web.dto.PostsSaveRequestDto;
 import com.epopcon.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
@@ -23,7 +24,7 @@ public class PostsApiController {
     }
 
     @GetMapping("/api/v1/posts/{id}")
-    public PostsUpdateRequestDto findByID(@PathVariable Long id) {
+    public PostsResponseDto findById(@PathVariable Long id) {
         return postsService.findById(id);
     }
 }
